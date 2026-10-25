@@ -57,7 +57,7 @@ public class contructora {
         scanner.close();
     }
 
-    // Función para guardar los cálculos en un archivo JSON local
+
     public static void guardarEnJson(String tipoCalculo, String detalle) {
         try (FileWriter fw = new FileWriter("registros.json", true);
              PrintWriter pw = new PrintWriter(fw)) {
@@ -71,7 +71,7 @@ public class contructora {
         }
     }
 
-    // 1. Muro de ladrillo
+    
     public static void calcularMuro(Scanner scanner) {
         System.out.print("¿De cuánto es el espesor del muro? (20 o 30 cm): ");
         int espesor = scanner.nextInt();
@@ -109,7 +109,7 @@ public class contructora {
         guardarEnJson("Muro de Ladrillo", detalle);
     }
 
-    // 2. Viga de hormigón
+
     public static void calcularViga(Scanner scanner) {
         System.out.print("Ingresa el largo de la viga (metros): ");
         double largo = scanner.nextDouble();
@@ -129,7 +129,7 @@ public class contructora {
         guardarEnJson("Viga de Hormigon", "Largo: " + largo + "m, Cemento: " + cemento + "kg");
     }
 
-    // 3. Columna de hormigón
+   
     public static void calcularColumna(Scanner scanner) {
         System.out.print("Ingresa el largo de la columna (metros): ");
         double largo = scanner.nextDouble();
@@ -149,7 +149,7 @@ public class contructora {
         guardarEnJson("Columna de Hormigon", "Largo: " + largo + "m, Cemento: " + cemento + "kg");
     }
 
-    // 4. Contrapisos
+   
     public static void calcularContrapiso(Scanner scanner) {
         System.out.print("Ingresa el espesor del contrapiso (metros): ");
         double espesor = scanner.nextDouble();
@@ -172,7 +172,7 @@ public class contructora {
         guardarEnJson("Contrapiso", "Volumen: " + volumen + "m3, Cemento: " + cemento + "kg");
     }
 
-    // 5. Techo
+
     public static void calcularTecho(Scanner scanner) {
         System.out.print("Ingresa el espesor del techo (metros): ");
         double espesor = scanner.nextDouble();
@@ -199,7 +199,7 @@ public class contructora {
         guardarEnJson("Techo", "Superficie: " + superficie + "m2, Cemento: " + cemento + "kg");
     }
 
-    // 6. Pisos
+  
     public static void calcularPisos(Scanner scanner) {
         System.out.print("Ingresa el ancho del paño de piso (metros): ");
         double ancho = scanner.nextDouble();
@@ -213,7 +213,6 @@ public class contructora {
         guardarEnJson("Pisos", "Superficie con recortes: " + superficieConRecorte + " m2");
     }
 
-    // 7. Pintura
     public static void calcularPintura(Scanner scanner) {
         System.out.print("Ingresa la superficie del muro (m²): ");
         double superficie = scanner.nextDouble();
